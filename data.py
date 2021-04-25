@@ -40,7 +40,7 @@ class BSDS_500(Dataset):
     def __init__(self, root, flag='train', VOC=False, transform=None):
         if flag == 'train':
             if VOC:
-                filenames = read_from_pair_txt(root['BSDS-VOC'], 'bsds_pascal_train_pair_s5.lst')
+                filenames = read_from_pair_txt(root['BSDS-VOC'], 'bsds_pascal_train_pair.lst')
             else:
                 filenames = read_from_pair_txt(root['BSDS'], 'train_pair.lst')
             self.im_list = [im_name[0] for im_name in filenames]
