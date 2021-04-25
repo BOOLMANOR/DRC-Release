@@ -21,8 +21,8 @@ if __name__ == "__main__":
     cfgs['device'] = 'cuda:0'
 
     # BSDS and BSDS-VOC
-    cfgs['dataset'] = 'BSDS'
-    cfgs['backbone'] = 'vgg'
+    cfgs['dataset'] = 'BSDS-VOC'
+    cfgs['backbone'] = 'resnet101'
     cfgs['loss'] = 'AF'
     cfgs['batch_size'] = 1
     cfgs['acc_grad'] = 10
