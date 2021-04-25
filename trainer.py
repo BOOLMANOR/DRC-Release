@@ -72,12 +72,13 @@ def trainer(cfgs, train_dataset):
                 print(format_str % (datetime.now(), epoch + 1, i + 1, running_loss / 10,
                                     examples_per_sec, sec_per_batch))
                 running_loss = 0.0
+        save_name = utils.cfgs2name(cfgs)
+        if not os.path.exists(save_name):
+            os.mkdir(save_name)
+        torch.save(net.state_dict(), './gdrive/MyDrive' + save_name + '/' + save_name + '.pth')
+        print('Finished Training')
 
-    save_name = utils.cfgs2name(cfgs)
-    if not os.path.exists(save_name):
-        os.mkdir(save_name)
-    torch.save(net.state_dict(), './' + save_name + '/' + save_name + '.pth')
-    print('Finished Training')
+
 
 
 
