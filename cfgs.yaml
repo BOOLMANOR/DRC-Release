@@ -9,7 +9,7 @@ c: 0.1
 dataset_path:
   # your path
   BSDS: /home/cyj/dataset/edge/HED-BSDS
-  BSDS-VOC: /home/cyj/dataset/edge
+  BSDS-VOC: ./data/HED-BSDS_PASCAL
   NYUD-V2: /home/cyj/dataset/edge/NYUD
 
 device: cuda:0
